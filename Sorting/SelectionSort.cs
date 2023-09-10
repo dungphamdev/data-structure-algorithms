@@ -2,6 +2,9 @@
 {
     public partial class Sorting
     {
+        /// <summary>
+        /// Complexity: O(n)
+        /// </summary>
         public static void SelectionSort(int[] arr)
         {
             for (int i = 0; i < arr.Length - 1; i++)
