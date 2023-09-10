@@ -1,6 +1,1 @@
-<img src="images/array-linkedlist-1.png" alt="Girl in a jacket" width="500" height="600">
-
-
-<p>
-    <img src="images/array-linkedlist-1.png" width="220" height="240" />
-</p>
+![array-linkedlist-1](https://github.com/dungphamdev/data-structure-algorithms/assets/58509770/0c394dee-1e5c-4c03-8c0b-fc6f9440cf73)
