@@ -1,27 +1,11 @@
-﻿
+﻿using Datastruct.Lib.Searching;
+
+var x = 10;
+var arr = new int[] { 1, 2, 3, 4, 5, 6, 10, 40 };
 
 
-using Datastruct.Lib.HashTable;
+var resultLinear = Searching.LinearSearch(x, arr);
+var resultBinary = Searching.BinarySearch(x, arr);
 
-var hashTable = new HashTable<string, string>(5);
-
-hashTable.Add("1", "student A");
-hashTable.Add("2", "student B");
-hashTable.Add("3", "student C");
-hashTable.Add("4", "student D");
-hashTable.Add("5", "student E");
-hashTable.Add("6", "student F");
-
-hashTable.PrintHashTable();
-
-// find element
-var x =  hashTable.Get("3");
-Console.WriteLine($"X: {x}");
-
-// test remove
- hashTable.Remove("3");
-hashTable.Remove("1");
-hashTable.PrintHashTable();
-
-
-
+Console.WriteLine($"Linear result: {resultLinear}");
+Console.WriteLine($"Binary result: {resultBinary}");

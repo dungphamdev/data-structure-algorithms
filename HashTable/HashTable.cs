@@ -7,7 +7,7 @@
 
         int _size;
 
-        public HashTable(int size) 
+        public HashTable(int size)
         {
             // TODO: this is fixed length version, extend to dyamic length later
             _size = size;
@@ -20,21 +20,23 @@
         public void Add(TKey key, TValue value)
         {
             var pos = GetPosition(key);
-           
+
             // nomal case
             if (_items[pos] == null)
             {
                 // init new list and add 1st item 
                 _items[pos] = new LinkedList<Tuple<TKey, TValue>>();
                 _items[pos].AddFirst(new Tuple<TKey, TValue>(key, value));
-            } else
+            }
+            else
             {
                 // != null
                 // check duplicate
                 if (_items[pos].Any(x => x.Item1.Equals(key)))
                 {
                     throw new Exception("Duplicate key, cannot insert!");
-                } else
+                }
+                else
                 {
                     _items[pos].AddFirst(new Tuple<TKey, TValue>(key, value));
                 }
@@ -79,8 +81,8 @@
         public void PrintHashTable()
         {
             Console.WriteLine(" Hash table:");
-            
-            foreach (var item in _items) 
+
+            foreach (var item in _items)
             {
                 if (item == null) break;
 

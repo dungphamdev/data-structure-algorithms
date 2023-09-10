@@ -22,7 +22,8 @@
                 _array[_tail] = item;
                 _tail++;
                 return;
-            } else
+            }
+            else
             {
                 T[] newArr = new T[_capacity + 1];
                 for (int i = 0; i < _capacity; i++)
